@@ -14,7 +14,7 @@
 - hartmann_min.jpg: result figure
 - requirements.txt: list of dependency
 
-## How to run?
+## How to run the benchmark
 
 ### Method 1: Using google colab (easiest)
 
@@ -29,15 +29,19 @@ You can use either a cpu or gpu runtime environment to run the benchmark. Both a
 Clone this repository:
 
 ```
-git clone https://github.com/abauville/Bayes-opt-challenge.git
+> git clone https://github.com/abauville/Bayes-opt-challenge.git
 ```
 
 You will find the list of dependencies in requirements.txt. You can install them with
 ```
-pip install -r requirements.txt
+> pip install -r requirements.txt
 ```
 
 You will need JupyterLab or Notebook to run the Jupyter notebooks. These software come installed with the popular [Anaconda package manager](https://www.anaconda.com/).
 
 
 Run the benchmark using `00_benchmark.ipynb`. This notebook creates result files in the `output/` folder. Use `01_plot.ipynb` to visualize the benchmark results.
+
+## How to run the unit tests
+
+The unit tests can be run locally. First, install the required libraries with `> pip install -r requirements.txt`. Then, in a terminal execute the command `> pytest`, from the root of the repository.
