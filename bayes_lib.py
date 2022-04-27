@@ -38,7 +38,7 @@ def train_hyper_params(model, likelihood):
 
 
 
-def get_x_new(aquisition_func, model, device='cpu'):
+def get_x_new(aquisition_func, device='cpu'):
     """Returns the point to aquire given an aquisition function and surrogate model."""
     bounds = torch.tensor([[0., 1.]] * 6).T.to(device)
     Xinit = gen_batch_initial_conditions(aquisition_func, bounds, q=1, num_restarts=25, raw_samples=500)
@@ -96,7 +96,7 @@ def run_experiment(gt_func, n_iter=1, n_train_ini=1, print_period=1):
         # New point aquisition
         # ============================
         EI = ExpectedImprovement(model, best_f=best_f, maximize=True)
-        x_new = get_x_new(EI, model, device)
+        x_new = get_x_new(EI, device)
         y_new = gt_func(x_new).to(device)
         best_f = max(y_new.item(), best_f)
         
