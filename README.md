@@ -20,7 +20,7 @@
 
 You can open and run the notebooks on google colab: 
 - [benchmark](https://colab.research.google.com/github/abauville/Bayes-opt-challenge/blob/main/00_benchmark.ipynb)
-- [plot](https://colab.research.google.com/github/abauville/Bayes-opt-challenge/blob/main/00_plot.ipynb)
+- [plot](https://colab.research.google.com/github/abauville/Bayes-opt-challenge/blob/main/01_plot.ipynb)
 
 You can use either a cpu or gpu runtime environment to run the benchmark. Both are functional, however, since the benchmark problem is rather small it is faster on cpu.
 
